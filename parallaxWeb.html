@@ -1,0 +1,113 @@
+<DOCTYPE! html>
+<head>
+  <title>Parallax Website</title>
+</head>
+
+<body>
+  <div class="row">
+    <div class="col-100">
+      <div class="paraMain">
+        <div class="paraInnerMain">
+          <h1 class="header">Parallax Website</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-100">
+      <div class="paraSec">
+        <div class="paraInner">
+          <h3 class="header">Header</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-100">
+      <div class="paraMain">
+        <div class="paraInnerMain">
+          <h1 class="header">Footer</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <style>
+  /*Grid*/
+  * {
+    box-sizing:border-box;
+    padding: 0px;
+    margin: 0px;
+  }
+  .row:after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+  [class*="col-"] {
+    float: left;
+    padding: 0px;
+  }
+  .col-25 {
+    width: 25%;
+  }
+  .col-50 {
+    width: 50%;
+  }
+  .col-75 {
+    width: 75%;
+  }
+  .col-100 {
+    width: 100%;
+  }
+
+  /*Parallax Design*/
+  .paraMain {
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%; /*full screen*/
+
+    background-image: url("");
+  }
+  .paraSec {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 500px;
+
+    background-image: url("");
+  }
+  .paraInnerMain {
+    padding-top: 20%;
+    padding-bottom: 20%;
+  }
+  .paraInner {
+    padding-top: 10%;
+    padding-bottom: 10%;
+  }
+
+  .header {
+    font-size: 250%;
+    text-align: center;
+  }
+
+  /*Mobile*/
+  @media only screen and (max-width: 768px) {  /*If a screen is 768px or less, than these conditions will run*/
+    [class*="col-"] {
+      width: 100%;
+    }
+    .paraMain, .paraSec {
+      background-attachment: local;
+    }
+    .paraInner {
+      padding-top: 40%;
+      padding-bottom: 20%;
+    }
+  }
+  </style>
+
+</body>
+</html>
